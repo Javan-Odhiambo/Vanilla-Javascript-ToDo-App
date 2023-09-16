@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <title>To do App</title>
+</head>
+
+<body class="relative md:flex h-screen">
+    <section id="sidebar" class="hidden z-10 absolute flex flex-col bg-neutral-200 md:static h-full sm:min-w-1/2 ">
+        <span id="add-task" class="absolute top-2 left-2 cursor-pointer rounded-full px-2 border-2 border-blue-300">Add task</span>
+        <span class="absolute right-2 top-2 md:hidden" id="sidbar-hide">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </span>
+        <div class="h-2 w-full mt-10 mb-1 bg-black">
+        </div>
+        <div id="tasks-container" class="px-2 space-y-1 overflow-y-scroll flex-grow">
+
+
+        </div>
+        <div class="flex flex-col space-y-2 m-2 text-center text-white">
+            <span id="mark-selected-tasks" class="bg-green-500 border-2 border-green-500 py-1">
+                Mark selected as completed
+            </span>
+            <span id="mark-all-tasks" class="border-2 border-green-500 py-1 text-green-500">
+                Mark all as completed
+            </span>
+            <span id="remove-selected-tasks" class="bg-red-500 border-2 border-red-500 py-1">
+                Remove selected
+            </span>
+            <span id="remove-all-tasks" class="border-2 border-red-500 py-1 text-red-500">
+                Remove all
+            </span>
+        </div>
+    </section>
+
+    <section class="relative flex flex-col text-center pt-2">
+         <span id="sidbar-show" class="absolute top-2 left-2 md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>              
+        </span> 
+         <h1 class="text-xl font-semibold">To Do App</h1> 
+         <div class="relative">
+            <span id="add-step" class="absolute right-2 cursor-pointer rounded-full px-2 border-2 border-blue-300">Add Step</span>
+            <p id="active-task-title" class="text-xl font-semibold text-gray-700"></p>
+            <section id="steps-container" class="p-4 space-y-2 flex-grow mt-5">
+                <p>Please select a Task to see the steps.</p>
+               
+            </section>
+            <p id="empty-steps" class="hidden">You don't have any steps yet</p>
+        </div> 
+         <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:mx-auto text-center mt-2 mx-2 ">
+            <div id="mark-selected-steps" class="bg-green-500 py-1 px-3">
+                Mark selected as completed
+            </div>
+            <div id="mark-all-steps" class="border-2 border-green-500 text-green-500 py-1  px-3">
+                Mark all as completed
+            </div>
+            <div id="remove-selected-steps" class="bg-red-500 py-1 px-3">
+                Remove selected
+            </div>
+            <div id="remove-all-steps" class="border-2 border-red-500 text-red-500 py-1  px-3">
+                Remove all
+            </div>
+        </div> 
+    </section>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.done {
+    @apply line-through;
+}
+
+div[active="true"] {
+    @apply bg-gray-400 text-white;
+}
